@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../styles/global.css">
+    <!-- <script src="/JS/javascript.js"></script> -->
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -30,30 +31,52 @@
             </span>    
     <p>An instructor focused on helping pople start programming for web</p>
 
-    <ul>
-        <li>
-            <a href="https://youtube.com">
-            <img src="/images/youtube.png" alt="" target="_blank">
+    <ul id="socialLinks">
+        <li class="youtube">
+            <a href="https://youtube.com/nomeQualquer" target="_blank">
+            <img src="/images/youtube.png" alt="" >
             </a>
         </li>
-        <li>
-            <a href="https://instragram.com">
-            <img src="/images/instragram.png" alt="" target="_blank">
+        <li class="instagram">
+            <a href="https://instragram.com/nomeQualquer" target="_blank">
+            <img src="/images/instragram.png" alt="" >
             </a>
         </li>
-        <li>
-            <a href="https://facebook.com">
-            <img src="/images/facebook.png" alt="" target="_blank">
+        <li class="facebook">
+            <a href="https://facebook.com/nomeQualquer" target="_blank">
+            <img src="/images/facebook.png" alt="" >
             </a>
         </li>
-        <li>
-            <a href="https://twitter.com">
-            <img src="/images/twitter.png" alt="" target="_blank">
+        <li class="twitter">
+            <a href="https://twitter.com/nomeQualquer" target="_blank">
+            <img src="/images/twitter.png" alt="" >
             </a>
         </li>
     </ul>
 
         </div>
 </main>
+
+<script>
+    const linksSocialMedia = {
+        gihub:'AnselmoDiasFilho',
+        youtube:'UCirXe0bVhQmWQ49HEeYmGIg',
+        instagram:'_anselmo_69',
+        facebook:'anselmo.alves.96930',
+        twitter:'TV45443921'
+}
+
+function getUrl() {
+    for (let li of socialLinks.children) {
+        const social = li.getAttribute('class')
+        li.children[0].href =`https://${social}.com/${linksSocialMedia[social]}`
+     
+    }
+}
+
+
+   getUrl()
+
+</script>
 </body>
 </html>
