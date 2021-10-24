@@ -20,16 +20,17 @@
                 <span>
                     <img src="/images/build.png" alt="selo rocketseat">
                 </span>
-                    <img src="/images/perfil.png" alt="Foto Pessoal">
+                    <img id="userImage" src="/images/perfil.png" alt="Foto Pessoal">
             </div>
 
 
-            <h1>Anselmo Dias</h1>
-            <span class="imgGitHub">
-                <img src="/images/github.png" alt="icone github" />
-                <a href="https://github.com/AnselmoDiasFilho/"> _anselmo69_ </a>
+            <h1 id="userName">Qualquer nome</h1>
+             <span class="imgGitHub">
+                    <img  src="/images/github.png" alt="icone github" />
+                    <a id="userLink" href="https://github.com/qualquernome/"> 
+                        <spam id="userNameLogin"> _anselmo69_ </spam></a>
             </span>    
-    <p>An instructor focused on helping pople start programming for web</p>
+    <p id="userBio">QualquerBiografia</p>
 
     <ul id="socialLinks">
         <li class="youtube">
@@ -57,26 +58,6 @@
         </div>
 </main>
 
-<script>
-    const linksSocialMedia = {
-        gihub:'AnselmoDiasFilho',
-        youtube:'UCirXe0bVhQmWQ49HEeYmGIg',
-        instagram:'_anselmo_69',
-        facebook:'anselmo.alves.96930',
-        twitter:'TV45443921'
-}
-
-function getUrl() {
-    for (let li of socialLinks.children) {
-        const social = li.getAttribute('class')
-        li.children[0].href =`https://${social}.com/${linksSocialMedia[social]}`
-     
-    }
-}
-
-
-   getUrl()
-
-</script>
+<script src="/main.js"></script>
 </body>
 </html>
